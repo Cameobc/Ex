@@ -24,5 +24,10 @@ public class CardTest {
 		
 		
 	}
-
 }
+//class card{
+//	String kind;
+//	int number;
+//	static int width = 100;
+//	static int height = 250;
+//}
