@@ -4,7 +4,7 @@ public class PrintfEx01 {
 	public static void main(String[] args) {
 //		System.out.println(10/3);
 //		System.out.println(10/3.0);
-//		System.out.printf("%.2f%n", 10.0/3 );
+		System.out.printf("%.2f%n", 10.0/3 );
 	
 //		System.out.printf("%d%n", 15);
 //		System.out.printf("%#o%n", 15);
