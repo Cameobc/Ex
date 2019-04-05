@@ -3,10 +3,14 @@ package com.sesung.control.example;
 import java.util.Scanner;
 
 public class ControlTest {
+	private Scanner sc;
+	
+	public ControlTest() {
+		sc = new Scanner(System.in);
+	}
 
 
 	public void test1() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Kor");
 		int kor = sc.nextInt();
 		System.out.println("Eng");
@@ -29,7 +33,6 @@ public class ControlTest {
 	}
 
 	public void  test2() {
-		Scanner sc = new Scanner(System.in);
 		boolean check = true;
 		while(check) {
 			System.out.println("***초기메뉴***");
@@ -65,7 +68,6 @@ public class ControlTest {
 	
 	public void test3() {
 		int a = 0;
-		Scanner sc = new Scanner(System.in);
 		System.out.println("정수 입력");
 		a = sc.nextInt();
 		if(a>=0) {
@@ -73,5 +75,82 @@ public class ControlTest {
 		}else {
 			System.out.println("양수가 아니다");
 		}
+	}
+	
+	public void test4() {
+		int a =0;
+		String str = null;
+		System.out.println("정수를 입력해주세요.");
+		a = sc.nextInt();
+		if((a%2)==0 && a>=0) {
+			str="짝수다";
+		}else {
+			str="홀수다";
+		}
+		System.out.println(str);
+	}
+	
+	public void test5() {
+		String name=null;
+		int age = 0;
+		double height=0;
+		
+		System.out.println("Name ?");
+		name = sc.next();
+		System.out.println("Age ?");
+		age = sc.nextInt();
+		System.out.println("Height ?");
+		height = sc.nextDouble();
+		
+		if(name!=null && name.length()>0 && age>0 && height>0) {
+			System.out.println("NAME : "+name);
+			System.out.println("AGE : "+age);
+			System.out.println("HEIGHT : "+height);
+			System.out.println("Confirmed : "+name+"의 나이는"+age+"세이고, 키는 "+height+"cm 이다.");
+		}else {
+			System.out.println("Unknown");
+		}
+	}
+	
+	public void test6() {
+		int a =0;
+		int b=0;
+		System.out.println("a?");
+		a = sc.nextInt();
+		System.out.println("b?");
+		b = sc.nextInt();
+		if(a>=0 && b>=0) {
+			System.out.println("첫번째 정수 : "+a);
+			System.out.println("두번째 정수 : "+b);
+			System.out.println(a+"+"+b+"="+(a+b));
+			System.out.println(a+"-"+b+"="+(a-b));
+			System.out.println(a+"*"+b+"="+(a*b));
+			System.out.println(a+"/"+b+"="+(a/b));
+			System.out.println(a+"%"+b+"="+(a%b));
+		}
+	}
+	
+	public void test7() {
+		int a = 0;
+		char ch= 'a';
+		System.out.println("SCORE ?");
+		a = sc.nextInt();
+		
+		if(a>=90) {
+			ch='A';
+		}
+		if(a>=80 && a<90) {
+			ch='B';
+		}
+		if(a>=70&&a<80) {
+			ch='C';
+		}
+		if(a>=60 && a<70) {
+			ch = 'D';
+		}
+		if(a<60 && a>0) {
+			ch= 'F';
+		}
+		System.out.println("SCORE : "+a+"  GRAGE : "+ch);
 	}
 }
