@@ -1,5 +1,8 @@
 package com.sesung.all.example.controller;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Function {
@@ -51,13 +54,19 @@ public class Function {
 	}
 	
 	public void totalCalculator() {
-		
 		System.out.println("정수 A를 입력하세요");
 		int a = sc.nextInt();
 		System.out.println("정수 B를 입력하세요");
 		int b = sc.nextInt();
-		
-		
+		int sum =0;
+		ArrayList<Integer> ar = new ArrayList<Integer>();
+		ar.add(a);
+		ar.add(b);
+		Collections.sort(ar);
+		for(int i=ar.get(0);i<=ar.get(1); i++) {
+			sum = i+sum;
+		}
+		System.out.println(sum);
 	}
 	
 	public void profile() {
@@ -74,22 +83,78 @@ public class Function {
 		System.out.println("성별 : "+gender);
 		System.out.println("성격 : "+cha);
 		System.out.println("================");
-		
 	}
 	
 	public void sungjuk() {
+		char ch = 0;
+		System.out.println("이름 입력");
+		String name = sc.next();
+		System.out.println("학년 입력");
+		int year = sc.nextInt();
+		System.out.println("반 입력");
+		int ban = sc.nextInt();
+		System.out.println("번호 입력");
+		int num = sc.nextInt();
+		System.out.println("성별 입력(M/F)");
+		String gender = sc.next();
+		System.out.println("성적 입력");
+		double sung = sc.nextDouble();
 		
+		char gen = gender.charAt(0);
+		String result = gen=='M' ? "남학생":"여학생";
+		String grade = sung>=90?"A":(sung<90 && sung>=80 ? "B":(sung<80 && sung>=70 ? "C":(sung<70 && sung>=60 ? "D":"F")));
+		System.out.println(year + "학년 "+ban+"반 "+num+" 번 "+result+" "+name+"의 점수는 "+sung+"이고, "+grade+" 학점입니다.");
 	}
 	
 	public void printStarNumber() {
-		
+		System.out.println("정수를 입력하세요");
+		int a = sc.nextInt();
+		if(a>0) {
+			for(int i=0; i<a;i++) {
+				for(int j=0; j<i;j++) {
+					System.out.print("*");
+				}
+				System.out.println(i+1);
+//				System.out.println();
+			}
+			System.out.println("===========");
+		}else{
+			System.out.println("양수가 아닙니다.");
+		}
 	}
 	
 	public void sumRandomNumber() {
-		
+		double  a = Math.random();
+		a= a*100;
+		a=Math.round(a);
+		int sum=0;
+		int b = (int)a;
+		System.out.println(b);
+		for(int i=0; i<=b; i++) {
+			sum = sum+i;
+		}
+		System.out.println(sum);
 	}
 	
 	public void continueGugudan() {
-		
+		System.out.println("정수를 입력해주세요.");
+		int a = sc.nextInt();
+		if(a>0) {
+			for(int i=1; i<10; i++) {
+				if((i%a)==0) {
+					continue;
+				}
+				System.out.println(a+" * "+i+" = "+(a*i));
+			}
+		}else {
+			System.out.println("양수가 아닙니다.");
+		}
+	}
+	
+	public void shutNumber() {
+		boolean check = true;
+		do{
+			
+		}while(true);
 	}
 }

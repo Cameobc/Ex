@@ -27,19 +27,20 @@ public class Menu {
 		case 1:
 			function.calculator();
 			break;
-		case 2:
+		case 2:function.totalCalculator();
 			break;
 		case 3:function.profile();
 			break;
-		case 4:
+		case 4:function.sungjuk();
 			break;
-		case 5:
+		case 5:function.printStarNumber();
 			break;
-		case 6:
+		case 6:function.sumRandomNumber();
 			break;
-		case 7:
+		case 7:function.continueGugudan();
 			break;
 		case 8:
+			
 			break;
 		case 9:
 			System.out.println("프로그램 종료");
