@@ -154,6 +154,25 @@ public class Function {
 	public void shutNumber() {
 		boolean check = true;
 		do{
+			System.out.println("정수를 입력해주세요.");
+			int a = sc.nextInt();
+			Random random = new Random();
+			int num = random.nextInt(6)+1; //플러스 1 해주는 이유는 0을 제외하기 위해서!
+			int num2 = random.nextInt(6)+1;
+			int sum = num+num2;
+			System.out.println(sum);
+			if(a==sum) {
+				System.out.println("맞췄습니다.");
+			}else {
+				System.out.println("틀렸습니다.");
+			}
+			System.out.println("계속하시겠습니까?(y/n)");
+			String answer = sc.next();
+			if(answer.equals("n") || answer.equals("N")) {
+				System.out.println("프로그램 종료");
+				check=!check;
+				break;
+			}
 			
 		}while(true);
 	}

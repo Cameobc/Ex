@@ -39,8 +39,7 @@ public class Menu {
 			break;
 		case 7:function.continueGugudan();
 			break;
-		case 8:
-			
+		case 8:function.shutNumber();
 			break;
 		case 9:
 			System.out.println("프로그램 종료");
