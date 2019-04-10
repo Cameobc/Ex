@@ -16,11 +16,10 @@ public class BurgerController {
 
 	public void start() {
 		ArrayList<Burger> ar = new ArrayList<Burger>();
+		ArrayList<Burger> ar2 = new ArrayList<Burger>();
 		ar = bi.burgerInif();
 		boolean check = true;
 		int select = 0;
-		int num = 0;
-		int sum = 0;
 			while(check){
 			for(int i=0; i<ar.size(); i++) {
 				System.out.print(i+1+"번. "+ar.get(i).getMenu()+"\t"+ar.get(i).getPrice()+"원\n");
@@ -30,7 +29,7 @@ public class BurgerController {
 			if(select<=ar.size()) {
 				System.out.println(ar.get(select-1).getMenu()+"를 선택하셨습니다.");
 				System.out.println("수량은 ?");
-				num = sc.nextInt();
+				ar2.add(e) = sc.nextInt();
 				System.out.println(num+"개 주문하셨습니다.");
 				sum = sum +ar.get(select-1).getPrice()*num;
 				System.out.println("추가 주문하시겠습니까?(y/n)");

@@ -9,6 +9,18 @@ public class LoopTest {
 		sc = new Scanner(System.in);
 	}
 	
+	public void countInputCharacter() {
+		System.out.println("문자열을 입력하세요.(영어만)");
+		String a = sc.next();
+		System.out.println("비교할 문자를 입력하세요.");
+		String b = sc.next();
+		if(a.indexOf(b)!=-1) {
+			for(int i =0; i<a.length(); i++) {
+				
+			}
+		}
+	}
+	
 	public void printStar1() {
 		System.out.println("정수를 입력해주세요.");
 		int star = sc.nextInt();

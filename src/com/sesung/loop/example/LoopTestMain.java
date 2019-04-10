@@ -7,7 +7,7 @@ public class LoopTestMain {
 	public static void main(String[] args) {
 		LoopTest lt = new LoopTest();
 //		lt.printStar2();
-		CashBurgerKing cb = new CashBurgerKing();
-		cb.selectMenu();
+//		CashBurgerKing cb = new CashBurgerKing();
+//		cb.selectMenu();
 	}
 }
