@@ -19,7 +19,7 @@ public class MemberController {
 		ArrayList<Member> ar = new ArrayList<Member>();
 		boolean check = true;
 		while(check) {
-			
+
 			System.out.println("1.멤버정보 받아오기");
 			System.out.println("2.멤버정보 입력하기");
 			System.out.println("3.멤버정보 전체출력");
@@ -29,8 +29,10 @@ public class MemberController {
 			System.out.println("7.프로그램 종료하기");
 			int select = sc.nextInt();
 			switch(select) {
-			case 1: ar = mi.MemberInit();
-			break;
+			case 1: 
+				ar = mi.MemberInit();
+				System.out.println("정보 호출 성공");
+				break;
 			case 2:
 				Member member = ma.memberAdd();
 				ar.add(member);
@@ -42,6 +44,8 @@ public class MemberController {
 			case 5: 
 				break;
 			case 6:
+				ma.memberBackup(ar);
+				System.out.println("백업 완료");
 				break;
 			case 7:
 				check=!check;
@@ -51,6 +55,7 @@ public class MemberController {
 
 			}
 		}
+		System.out.println("프로그램 종료");
 	}
 
 }

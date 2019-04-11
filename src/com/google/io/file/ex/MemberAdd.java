@@ -8,18 +8,37 @@ import java.util.Scanner;
 
 public class MemberAdd {
 	
-	public void memberBackup() {
-		ArrayList<Member> ar = new ArrayList<Member>();
+	public void memberBackup(ArrayList<Member> ar) {
 		File file = new File("c:\\test", "test.txt");
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter(file);
+			fw = new FileWriter(file, false);
+			fw.write("start");
+			fw.write("\r\n");
+			fw.flush();
 			for(Member m :ar) {
-				
+				fw.write(m.getGuild());
+				fw.write("-");
+				fw.write(m.getName());
+				fw.write("-");
+				fw.write(m.getAge()+"");
+				fw.write("-");
+				fw.write(m.getGrade());
+				fw.write("-");
+				fw.write(m.getType());
+				fw.write("\r\n");
+				fw.flush();
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				fw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		
